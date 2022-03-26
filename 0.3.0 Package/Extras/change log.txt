@@ -1,0 +1,5 @@
+﻿Simpl-Py Change Log
+
+* 0/0/00 - Change 1
+
+Changes will be recorded on 1.0.0 + versions
