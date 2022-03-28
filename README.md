@@ -2,6 +2,7 @@
 
 # Simpl-Py
 Simpl-Py is a simple, easy, and fast programming language, sharing similar syntax with Python.
+<br>
 [![GitHub Issues](https://img.shields.io/github/issues/Zer0-Official/Simpl-Py?style=flat-square)](https://github.com/Zer0-Official/Simpl-Py/issues)
 <br>
 ![](https://github.com/Zer0-Official/Simpl-Py/blob/main/0.3.0%20Package/media/Simpl-Py%20TN.png)
