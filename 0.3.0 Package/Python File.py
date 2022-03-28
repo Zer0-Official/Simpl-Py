@@ -1,7 +1,7 @@
 # Variables + Imports
 import wmi
 version = '0.3.0'
-updated = '3/27/2022'
+updated = '3/28/2022'
 var1 = 0
 var2 = 0
 var3 = 0
