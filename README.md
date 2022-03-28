@@ -5,7 +5,7 @@ Simpl-Py is a simple, easy, and fast programming language, sharing similar synta
 <br>
 [![GitHub Issues](https://img.shields.io/github/issues/Zer0-Official/Simpl-Py?style=flat-square)](https://github.com/Zer0-Official/Simpl-Py/issues)
 <br>
-![](https://github.com/Zer0-Official/Simpl-Py/blob/main/0.3.0%20Package/media/Simpl-Py%20TN.png)
+<img src="https://github.com/Zer0-Official/Simpl-Py/blob/main/0.3.0%20Package/media/Simpl-Py%20TN.png" align="middle" width="640" height="320"/>
 
 ## Code
 The syntax in Simpl-Py is easy to learn and understand. Here is the hello world program in Simpl-Py:
