@@ -35,7 +35,7 @@ Un-zip the file and run `Simpl-Py.exe` or execute `Python File.py`.
 *Only needed if running .py file*
 * wmi
 
-### Credits
+## Credits
 Simpl-Py by Zer0 2022
 <br>
 Simpl-Py is owned and operated by Zer0
