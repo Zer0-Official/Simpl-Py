@@ -1,4 +1,4 @@
-<img src="https://github.com/Zer0-Official/Simpl-Py/blob/main/0.3.0%20Package/media/Simpl-Py%20Small%20Logo.png" align="right" width="100" height="100"/>
+<img src="https://github.com/Zer0-Official/Simpl-Py/blob/main/0.3.0%20Package/media/Simpl-Py%20Small%20Logo.png" align="right" width="50" height="50"/>
 
 # Simpl-Py
 Simpl-Py is a simple, easy, and fast programming language, sharing similar syntax with Python.
