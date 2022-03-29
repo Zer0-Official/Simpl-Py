@@ -14,11 +14,11 @@ The syntax in Simpl-Py is easy to learn and understand. Here is the hello world 
 Print What? >> Hello World
 Hello World
 ```
+*(">>" shows user input)*
 
 ## Features
 * Included .exe interpreter
 * Support on Python 3.6+
-* Examples to get started
 * Full documentation
 
 ## Download and Run
