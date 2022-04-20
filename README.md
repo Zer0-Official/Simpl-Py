@@ -17,23 +17,24 @@ Hello World
 *(">>" shows user input)*
 
 ## Features
-* Included .exe interpreter
+* Full interpreter
 * Support on Python 3.6+
 * Full documentation
 
 ## Download and Run
-*There are 2 ways to download Simpl-Py*
+*There are 3 ways to download Simpl-Py*
 
 #### Method 1
-Click the 'Download Code' button above. Un-zip the file and run `Simpl-Py.exe` or execute the `Python File.py` file.
+Click the 'Download Code' button above. Un-zip the file and execute the `Simpl-Py.py` file.
 
 #### Method 2
 Go to the Simpl-Py website and download the ZIP file there. (link to the right).
-Un-zip the file and run `Simpl-Py.exe` or execute `Python File.py`.
+Un-zip the file and execute `Simpl-Py.py`.
 
-## Requirements
-*Only needed if running .py file*
-* wmi
+#### Method 3
+`git clone https://github.com/zer0-official/simpl-py`
+<br>
+*The requirements are found in `requirements.txt`*
 
 ## Credits
 Simpl-Py by Zer0 2022
