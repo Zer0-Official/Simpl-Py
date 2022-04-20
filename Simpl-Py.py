@@ -2,9 +2,8 @@
 import wmi
 version = '0.4.0'
 updated = '4/20/2022'
-var1 = 0
-var2 = 0
-var3 = 0
+varName = []
+varVal = []
 
 # Functions
 def systemInfoDisp():
@@ -82,25 +81,19 @@ def printHandler(code):
 
 def varHandler(code):
     # Variables
-    global var1,var2,var3
-    if code == 'var1':
-        var1 = input('Set var1:  ')
-        return ('Set var1 to ' + var1)
-    elif code == 'var2':
-        var2 = input('Set var2:  ')
-        return ('Set var2 to ' + var2)
-    elif code == 'var3':
-        var3 = input('Set var3:  ')
-        return ('Set var3 to ' + var3)
+    if code == 'var.new':
+        cVarName = input('New Var Name:  ')
+        varName.append(cVarName)
+        cVarVal = input('Enter Value:  ')
+        varVal.append(cVarVal)
+        return ('Created ' + cVarName + ' with value ' + cVarVal)
 
     elif code == 'print_var':
         cPrintVar = input('What Variable?  ')
-        if cPrintVar == 'var1':
-            return var1
-        elif cPrintVar == 'var2':
-            return var2
-        elif cPrintVar == 'var3':
-            return var3
+        if cPrintVar in varName:
+            cVarFindIndex = varName.index(str(cPrintVar))
+            cVarFindVal = varVal[cVarFindIndex]
+            print(cVarFindVal)
         else:
             return 'Variable not found.'
 
