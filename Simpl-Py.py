@@ -2,6 +2,7 @@
 import wmi
 version, updated = '0.4.0', '4/21/2022'
 varName, varVal = [], []
+cMathInts, cMathSub = [], 0
 
 # Functions
 def systemInfoDisp():
@@ -41,15 +42,18 @@ def printHandler(code):
         cEchoOut = cEcho * cEchoAmount
         return cEchoOut
     elif code == 'print_math':
-        cMathInt1 = int(input('First Integer:  '))
+        cMathIntCount = int(input('Number of Integers: '))
+        for i in range(0, cMathIntCount):
+            cMathInts.append(int(input('Integer:  ')))
         cMathOp = input('Operator (+, -, *, /):  ')
-        cMathInt2 = int(input('Second Integer:  '))
         if cMathOp == '+':
-            print('{} + {} = '.format(cMathInt1, cMathInt2))
-            return (cMathInt1 + cMathInt2)
+            return sum(cMathInts)
         elif cMathOp == '-':
-            print('{} - {} = '.format(cMathInt1, cMathInt2))
-            return (cMathInt1 - cMathInt2)
+            cMathSub = cMathInts[0]
+            for i in range(1, len(cMathInts)):
+                cMathSub -= cMathInts[i]
+            return cMathSub
+
         elif cMathOp == '*':
             print('{} * {} = '.format(cMathInt1, cMathInt2))
             return (cMathInt1 * cMathInt2)
@@ -58,6 +62,9 @@ def printHandler(code):
             return (cMathInt1 / cMathInt2)
         else:
             return 'Invalid operator.'
+
+        cMathInts.clear()
+
     elif code == 'print.correct':
         cCorrect = input('Correct What?  ')
         return cCorrect.capitalize()
