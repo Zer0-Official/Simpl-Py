@@ -2,7 +2,7 @@
 import wmi
 version, updated = '0.4.0', '4/21/2022'
 varName, varVal = [], []
-cMathInts, cMathSub = [], 0
+cMathInts, cMathSub, cMathMult, cMathDiv = [], 0, 0, 0
 
 # Functions
 def systemInfoDisp():
@@ -42,6 +42,7 @@ def printHandler(code):
         cEchoOut = cEcho * cEchoAmount
         return cEchoOut
     elif code == 'print_math':
+        cMathInts.clear()
         cMathIntCount = int(input('Number of Integers: '))
         for i in range(0, cMathIntCount):
             cMathInts.append(int(input('Integer:  ')))
@@ -53,17 +54,18 @@ def printHandler(code):
             for i in range(1, len(cMathInts)):
                 cMathSub -= cMathInts[i]
             return cMathSub
-
         elif cMathOp == '*':
-            print('{} * {} = '.format(cMathInt1, cMathInt2))
-            return (cMathInt1 * cMathInt2)
+            cMathMult = cMathInts[0]
+            for i in range(1, len(cMathInts)):
+                cMathMult *= cMathInts[i]
+            return cMathMult
         elif cMathOp == '/':
-            print('{} / {} = '.format(cMathInt1, cMathInt2))
-            return (cMathInt1 / cMathInt2)
+            cMathDiv = cMathInts[0]
+            for i in range(1, len(cMathInts)):
+                cMathDiv /= cMathInts[i]
+            return cMathDiv
         else:
             return 'Invalid operator.'
-
-        cMathInts.clear()
 
     elif code == 'print.correct':
         cCorrect = input('Correct What?  ')
