@@ -1,9 +1,7 @@
 # Variables + Imports
 import wmi
-version = '0.4.0'
-updated = '4/21/2022'
-varName = []
-varVal = []
+version, updated = '0.4.0', '4/21/2022'
+varName, varVal = [], []
 
 # Functions
 def systemInfoDisp():
@@ -18,30 +16,24 @@ def welcomeDisp():
 
 def inputHandler(code):
     pH = printHandler(code)
-    if pH != None:
-        return pH
+    if pH != None: return pH
     else:
         vH = varHandler(code)
-        if vH != None:
-            return vH
+        if vH != None: return vH
         else:
             txtH = txtHandler(code)
-            if txtH != None:
-                return txtH
+            if txtH != None: return txtH
             else:
                 slashH = slashHandler(code)
-                if slashH != None:
-                    return slashH
-                else:
-                    return ''
-
+                if slashH != None: return slashH
+                else: return ''
 
 def printHandler(code):
     # Print Functions
     if code == 'print':
         cPrint = input('Print What?  ')
         return cPrint
-    elif code == 'echo.print':
+    elif code == 'print.echo':
         cEcho = input('Echo What?  ')
         cEchoSpace = int(input('Echo Space?  '))
         cEcho = cEcho + (' ' * cEchoSpace)
@@ -66,16 +58,16 @@ def printHandler(code):
             return (cMathInt1 / cMathInt2)
         else:
             return 'Invalid operator.'
-    elif code == 'correct.print':
+    elif code == 'print.correct':
         cCorrect = input('Correct What?  ')
         return cCorrect.capitalize()
-    elif code == 'lower.print':
+    elif code == 'print.lower':
         cLower = input('Lower What?  ')
         return cLower.lower()
-    elif code == 'upper.print':
+    elif code == 'print.upper':
         cUpper = input('Upper What?  ')
         return cUpper.upper()
-    elif code == 'backwards.print':
+    elif code == 'print.backwards':
         cBackwards = input('Backwards What?  ')
         return (cBackwards [::-1])
 
