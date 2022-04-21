@@ -1,7 +1,7 @@
 # Variables + Imports
 import wmi
 version = '0.4.0'
-updated = '4/20/2022'
+updated = '4/21/2022'
 varName = []
 varVal = []
 
@@ -143,7 +143,7 @@ def slashHandler(code):
     elif code == '/stop':
         exit()
 
-#def otherHandler(code):
+# def otherHandler(code):
     # Miscellaneous Functions
     # blank
 
