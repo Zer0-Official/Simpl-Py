@@ -36,7 +36,43 @@ Un-zip the file and execute `Simpl-Py.py`.
 <br>
 *The requirements are found in `requirements.txt`*
 
+## More Code
+*Here is some code made in Simpl-Py:*
+
+#### print.echo example:
+print.echo will print any text on the screen as many times as you want (there is a limit based on your PCs power)
+```
+>> print.echo
+Echo What?  >> simpl-py (text to echo)
+Echo Space?  >> 3 (number of spaces between strings)
+Echo Amount? >> 5 (times to echo)
+```
+Output:
+```
+simpl-py   simpl-py   simpl-py   simpl-py   simpl-py
+```
+
+#### print_math example:
+print_math will do basic math operations with an (kind of) infinite amount of integers
+```
+>> print_math
+Integer Amount?  >> 3 (amount of numbers to operate)
+Integer:  >> 4
+Integer:  >> 7
+Integer:  >> 2
+Operator (+, -, *, /):  >> +
+```
+Output:
+```
+13
+```
+*(">>" shows user input)*
+
 ## Credits
+#### Contribute
+To contribute, solve an issue, send a PR, report a bug, etc. Contributors are found in `Extras/credits.txt`.
+
+#### Creator
 Simpl-Py by Zer0 2022
 <br>
 Simpl-Py is owned and operated by Zer0
