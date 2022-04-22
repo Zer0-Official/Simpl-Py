@@ -1,6 +1,6 @@
 # Variables + Imports
 import wmi
-version, updated = '0.4.0', '4/21/2022'
+version, updated = '0.4.0', '4/22/2022'
 varName, varVal = [], []
 cMathInts, cMathSub, cMathMult, cMathDiv = [], 0, 0, 0
 
