@@ -1,3 +1,1 @@
-Simpl-Py is coded, created, and published by Zer0 and any other contributors listed in the credits.
-You do not have permission to use any code unless you have a valid license.
-If you want a license to use code, you can get one by emailing: vlethestars10@gmail.com
+Simpl-Py is free and open source. If you have any questions, email vlethestars10@gmail.com
