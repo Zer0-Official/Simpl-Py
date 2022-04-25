@@ -1,7 +1,7 @@
 <img src="https://github.com/Zer0-Official/Simpl-Py/blob/main/media/Simpl-Py%20Small%20Logo.png" align="right" width="80" height="80"/>
 
 # Simpl-Py
-Simpl-Py is a simple, easy, and fast programming language, sharing similar syntax with Python.
+Simpl-Py is an easy, fast, and simple recreational programming language that is slowly being turned into something useful. This language shares similar syntax with Python.
 <br>
 [![GitHub Issues](https://img.shields.io/github/issues/Zer0-Official/Simpl-Py?style=flat-square)](https://github.com/Zer0-Official/Simpl-Py/issues)
 <br>
@@ -20,6 +20,7 @@ Hello World
 * Full interpreter
 * Support on Python 3.6+
 * Full documentation
+* Full error documentation
 
 ## Download and Run
 *There are 3 ways to download Simpl-Py*
