@@ -1,11 +1,18 @@
 # Variables + Imports
+# ------------------------------
+# CHANGE THE DATE AND VERSION!!!
+# ------------------------------
 try:
     import wmi
     import os
     from termcolor import colored
-    version, updated = '0.4.0', '4/22/2022'
+    from pathlib import Path
+    import importlib
+    import sys
+    version, updated = '0.6.0', '5/20/2022'
     varName, varVal, varType = [], [], []
     cMathInts, cMathSub, cMathMult, cMathDiv = [], 0, 0, 0
+    mods = []
 except:
     print('ROOT ERROR: VARIABLES/IMPORTS COULD NOT BE LOADED')
 
@@ -27,6 +34,20 @@ def welcomeDisp():
     except:
         print(colored('Welcome Display Error: {S-002x}', 'red'))
 
+def moduleHandler(code):
+    if code == 'import':
+        cImp = input('What Module?  ')
+        try:
+            importlib.import_module('SPY_' + cImp)
+        except:
+            print(colored('Module ' + cImp + ' Not Found.', 'red'))
+    elif '@' in code:
+        modN = code.replace('@', '')
+        modFunct = input('What Function?  ')
+        modCall = getattr(modN, modFunct)
+        modOut = modCall()
+        return modOut
+
 def inputHandler(code):
     pH = printHandler(code)
     if pH != None: return pH
@@ -39,7 +60,10 @@ def inputHandler(code):
             else:
                 slashH = slashHandler(code)
                 if slashH != None: return slashH
-                else: return ''
+                else:
+                    modH = moduleHandler(code)
+                    if modH != None: return modH
+                    else: return ''
 
 def printHandler(code):
     # Print Functions
@@ -229,29 +253,26 @@ def slashHandler(code):
     # blank
 
 def main():
-    try:
-        code = input('\n>>> ')
+    code = input('\n>>> ')
 
-        # Base Functions
-        if code == 'help':
-            print('---HELP---\n')
-            print('Report any bugs, flaws, or errors: github.com/Zer0-Official/Simpl-Py/issues')
-            print('To discuss Simpl-Py or get help with this program: github.com/Zer0-Official/Simpl-Py/discussions')
-        elif code == 'copyright':
-            print('---COPYRIGHT---\n')
-            with open("Extras/copyright.txt", "r") as file:
-                for CopyrightContents in file:
-                    print(CopyrightContents)
-        elif code == 'credits':
-            print('---CREDITS---\n')
-            with open("Extras/credits.txt", "r") as file:
-                for CreditsContents in file:
-                    print(CreditsContents)
-        else:
-            out = inputHandler(code)  # Direct to sections based on contents of input
-            print(out)
-    except:
-        print(colored('Main Error: {S-020x}', 'red'))
+    # Base Functions
+    if code == 'help':
+        print('---HELP---\n')
+        print('Report any bugs, flaws, or errors: github.com/Zer0-Official/Simpl-Py/issues')
+        print('To discuss Simpl-Py or get help with this program: github.com/Zer0-Official/Simpl-Py/discussions')
+    elif code == 'copyright':
+        print('---COPYRIGHT---\n')
+        with open("Extras/copyright.txt", "r") as file:
+            for CopyrightContents in file:
+                print(CopyrightContents)
+    elif code == 'credits':
+        print('---CREDITS---\n')
+        with open("Extras/credits.txt", "r") as file:
+            for CreditsContents in file:
+                print(CreditsContents)
+    else:
+        out = inputHandler(code)  # Direct to sections based on contents of input
+        print(out)
 
 systemInfoDisp()
 welcomeDisp()
