@@ -1,5 +1,7 @@
 Here is a list of all of the errors and their descriptions in Simpl-Py.
 
+If you ever get these errors, please make an issue on the GitHub page.
+
 
 |    code    |  title                     |  description
 

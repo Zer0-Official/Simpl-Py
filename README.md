@@ -74,7 +74,7 @@ Development programs are states of focus for projects like Simpl-Py. You can tak
 needs improvement in a project and turn it into a dev program so developers have a focus and a goal.
 
 Here is a list of  Dev Programs for Simpl-Py:
-#### Simpl-Py EXtended (2022) `OPEN`
+### Simpl-Py EXtended (2022) `OPEN`
 <img src="https://github.com/Zer0-Official/Simpl-Py/blob/main/media/SPY%20EX%20banner.png" align="right"/>
 Simpl-Py EXtended (SPY-EX) is the first Dev Program for Simpl-Py. This program focuses on making the
 language open to customization and adjustments for the user. This program may run for about 2 months.

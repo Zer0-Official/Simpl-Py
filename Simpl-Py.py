@@ -9,7 +9,7 @@ try:
     from pathlib import Path
     import importlib
     import sys
-    version, updated = '0.6.0', '5/20/2022'
+    version, updated = '0.6.0', '8/24/2022'
     varName, varVal, varType = [], [], []
     cMathInts, cMathSub, cMathMult, cMathDiv = [], 0, 0, 0
     mods = []
@@ -60,10 +60,10 @@ def inputHandler(code):
             else:
                 slashH = slashHandler(code)
                 if slashH != None: return slashH
-                else:
-                    modH = moduleHandler(code)
-                    if modH != None: return modH
-                    else: return ''
+#                else:
+#                    modH = moduleHandler(code)
+#                    if modH != None: return modH
+                else: return ''
 
 def printHandler(code):
     # Print Functions
