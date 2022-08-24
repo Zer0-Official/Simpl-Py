@@ -69,6 +69,23 @@ Output:
 ```
 *(">>" shows user input)*
 
+## Development Programs
+Development programs are states of focus for projects like Simpl-Py. You can take a topic or feature that
+needs improvement in a project and turn it into a dev program so developers have a focus and a goal.
+
+Here is a list of  Dev Programs for Simpl-Py:
+#### Simpl-Py EXtended (2022) `OPEN`
+<img src="https://github.com/Zer0-Official/Simpl-Py/blob/main/media/SPY%20EX%20banner.png" align="right"/>
+Simpl-Py EXtended (SPY-EX) is the first Dev Program for Simpl-Py. This program focuses on making the
+language open to customization and adjustments for the user. This program may run for about 2 months.
+
+Here are some examples of what may take place in the program:
+* A new interpreter console for the language with enhancing and adjustment options
+* A module system for users to add their own piece of code into the pie
+* New advertising and communication guidelines for the user
+* More interaction with the user within the language
+* --items may be removed or added--
+
 ## Credits
 #### Contribute
 To contribute, solve an issue, send a PR, report a bug, etc. Contributors are found in `Extras/credits.txt`.
