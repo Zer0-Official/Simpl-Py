@@ -8,7 +8,7 @@ Simpl-Py is an easy, fast, and simple recreational programming language that is 
 <img src="https://github.com/Zer0-Official/Simpl-Py/blob/main/media/Simpl-Py%20TN.png" align="middle" width="640" height="320"/>
 
 ## News
-#### Top Season Features for 2022
+#### Top Season Features for 2022 (click the video thumbnail to watch)
 [![Simpl-Py 2022 Season Goals Video](https://img.youtube.com/vi/8-Fpl5dcBH4/0.jpg)](https://www.youtube.com/watch?v=8-Fpl5dcBH4)
 
 
