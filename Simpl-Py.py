@@ -5,14 +5,15 @@
 try:
     import wmi
     import os
-    from termcolor import colored
+    from termcolor import colored, cprint
     from pathlib import Path
     import importlib
     import sys
-    version, updated = '0.6.0', '8/24/2022'
+    version, updated = '0.6.0', '12/4/2022'
     varName, varVal, varType = [], [], []
     cMathInts, cMathSub, cMathMult, cMathDiv = [], 0, 0, 0
     mods = []
+    cBeta = 0
 except:
     print('ROOT ERROR: VARIABLES/IMPORTS COULD NOT BE LOADED')
 
@@ -23,7 +24,7 @@ def systemInfoDisp():
         my_system = c.Win32_ComputerSystem()[0]
         print(f"System Info:  {my_system.Name} - {my_system.Manufacturer} - {my_system. Model} - {my_system.SystemType}")
     except:
-        print(colored('System Info Error: {S-001x}', 'red'))
+        cprint('System Info Error: {S-001x}', 'red')
         exit()
 
 def welcomeDisp():
@@ -31,8 +32,9 @@ def welcomeDisp():
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Welcome to Simpl-Py ' + version + ' (Last Updated: ' + updated + ')')
         print('Type "help", "copyright", or "credits" for more information.')
+        print('Type "/Simpl-Py" and "beta" to try the current beta features.')
     except:
-        print(colored('Welcome Display Error: {S-002x}', 'red'))
+        cprint('Welcome Display Error: {S-002x}', 'red')
 
 def moduleHandler(code):
     if code == 'import':
@@ -40,7 +42,7 @@ def moduleHandler(code):
         try:
             importlib.import_module('SPY_' + cImp)
         except:
-            print(colored('Module ' + cImp + ' Not Found.', 'red'))
+            cprint('Module ' + cImp + ' Not Found.', 'red')
     elif '@' in code:
         modN = code.replace('@', '')
         modFunct = input('What Function?  ')
@@ -66,13 +68,13 @@ def inputHandler(code):
                 else: return ''
 
 def printHandler(code):
-    # Print Functions
+    # Print Functions  ### PUT BETA ON ECHO PRINT
     if code == 'print':
         try:
             cPrint = input('Print What?  ')
             return cPrint
         except:
-            print(colored('Print Error: {S-004x}', 'red'))
+            cprint('Print Error: {S-004x}', 'red')
     elif code == 'print.echo':
         try:
             cEcho = input('Echo What?  ')
@@ -82,7 +84,7 @@ def printHandler(code):
             cEchoOut = cEcho * cEchoAmount
             return cEchoOut
         except:
-            print(colored('Print Echo Error: {S-005x}', 'red'))
+            cprint('Print Echo Error: {S-005x}', 'red')
     elif code == 'print_math':
         try:
             cMathInts.clear()
@@ -110,31 +112,31 @@ def printHandler(code):
             else:
                 return 'Invalid operator.'
         except:
-            print(colored('Print Math Error: {S-006x}', 'red'))
+            cprint('Print Math Error: {S-006x}', 'red')
     elif code == 'print.correct':
         try:
             cCorrect = input('Correct What?  ')
             return cCorrect.capitalize()
         except:
-            print(colored('Print Correct Error: {S-007x}', 'red'))
+            cprint('Print Correct Error: {S-007x}', 'red')
     elif code == 'print.lower':
         try:
             cLower = input('Lower What?  ')
             return cLower.lower()
         except:
-            print(colored('Print Lower Error: {S-008x}', 'red'))
+            cprint('Print Lower Error: {S-008x}', 'red')
     elif code == 'print.upper':
         try:
             cUpper = input('Upper What?  ')
             return cUpper.upper()
         except:
-            print(colored('Print Upper Error: {S-009x}', 'red'))
+            cprint('Print Upper Error: {S-009x}', 'red')
     elif code == 'print.backwards':
         try:
             cBackwards = input('Backwards What?  ')
             return (cBackwards [::-1])
         except:
-            print(colored('Print Backwards Error: {S-010x}', 'red'))
+            cprint('Print Backwards Error: {S-010x}', 'red')
 
 def varHandler(code):
     # Variables
@@ -152,7 +154,7 @@ def varHandler(code):
             print(varType)
             return ('Created ' + cVarName + ' with value ' + cVarVal)
         except:
-            print(colored('New Var Error: {S-011x}', 'red'))
+            cprint('New Var Error: {S-011x}', 'red')
 
     elif code == 'print_var':
         try:
@@ -164,7 +166,7 @@ def varHandler(code):
             else:
                 return 'Variable not found.'
         except:
-            print(colored('Print Var Error: {S-012x}', 'red'))
+            cprint('Print Var Error: {S-012x}', 'red')
 
 def txtHandler(code):
     # TXT Files
@@ -174,7 +176,7 @@ def txtHandler(code):
             cFile = open('Extras/MyDocuments/' + (cReadName + '.txt'), "r")
             return cFile.readlines()
         except:
-            print(colored('Read TXT Error: {S-013x}', 'red'))
+            cprint('Read TXT Error: {S-013x}', 'red')
     elif code == 'txt.write':
         try:
             cWriteName = input('File Name? (no extension)  ')
@@ -183,7 +185,7 @@ def txtHandler(code):
             cFile.write(cWrite)
             return ('Written to ' + cWriteName + '.')
         except:
-            print(colored('Write TXT Error: {S-014x}', 'red'))
+            cprint('Write TXT Error: {S-014x}', 'red')
     elif code == 'txt.write_var':
         try:
             cWriteVarName = input('File Name? (no extension)  ')
@@ -197,21 +199,21 @@ def txtHandler(code):
             else:
                 return 'Variable not found.'
         except:
-            print(colored('Write Var TXT Error: {S-015x}', 'red'))
+            cprint('Write Var TXT Error: {S-015x}', 'red')
     elif code == 'txt.new':
         try:
             cNewName = input('New File Name? (no extension)  ')
             cFile = open("Extras/MyDocuments/" + (cNewName + '.txt'), "w+")
             return 'File Created.'
         except:
-            print(colored('New TXT Error: {S-016x}', 'red'))
+            cprint('New TXT Error: {S-016x}', 'red')
     elif code == 'txt.delete':
         try:
             cFileRemove = input('Delete File Name? (no extension)  ')
             os.remove("Extras/MyDocuments/" + cFileRemove + ".txt")
             return 'File Deleted.'
         except:
-            print(colored('Delete TXT Error: {S-017x}', 'red'))
+            cprint('Delete TXT Error: {S-017x}', 'red')
 
 def slashHandler(code):
     # Slash Commands
@@ -223,7 +225,7 @@ def slashHandler(code):
             else:
                 return 'Invalid /get Command'
         except:
-            print(colored('/get Error: {S-018}', 'red'))
+            cprint('/get Error: {S-018}', 'red')
     elif code == '/Simpl-Py':
         try:
             cSP = input('What Simpl-Py Command?  ')
@@ -241,16 +243,18 @@ def slashHandler(code):
                 return 'Thank you for caring about Simpl-Py!'
             elif cSP == 'create_date':
                 return 'Simpl-Py Created: 7/12/2021'
+            elif cSP == 'beta':
+                cBeta = 1
+                return 'Beta Mode Activated! Find the Docs to see the Current Beta Features.'
             else:
                 return 'Invalid /Simpl-Py Command'
         except:
-            print(colored('/Simpl-Py Error: {S-019x}', 'red'))
+            cprint('/Simpl-Py Error: {S-019x}', 'red')
     elif code == '/stop':
         exit()
 
-# def otherHandler(code):
-    # Miscellaneous Functions
-    # blank
+# def betaHandler(code):
+    # Beta Features (activated by '/Simpl-Py' and 'beta')
 
 def main():
     code = input('\n>>> ')
