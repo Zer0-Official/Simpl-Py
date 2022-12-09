@@ -2,6 +2,8 @@
 # ------------------------------
 # CHANGE THE DATE AND VERSION!!!
 # ------------------------------
+
+# todo 0.7.0: add modules folder in extras
 try:
     import wmi
     import os
@@ -9,7 +11,7 @@ try:
     from pathlib import Path
     import importlib
     import sys
-    version, updated = '0.6.0', '12/8/2022'
+    version, updated = '0.6.9', '12/8/2022'
     varName, varVal, varType = [], [], []
     cMathInts, cMathSub, cMathMult, cMathDiv = [], 0, 0, 0
     mods = []
