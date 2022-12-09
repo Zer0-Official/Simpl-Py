@@ -9,7 +9,7 @@ try:
     from pathlib import Path
     import importlib
     import sys
-    version, updated = '0.6.0', '12/4/2022'
+    version, updated = '0.6.0', '12/8/2022'
     varName, varVal, varType = [], [], []
     cMathInts, cMathSub, cMathMult, cMathDiv = [], 0, 0, 0
     mods = []
@@ -37,35 +37,30 @@ def welcomeDisp():
         cprint('Welcome Display Error: {S-002x}', 'red')
 
 def moduleHandler(code):
-    if code == 'import':
-        cImp = input('What Module?  ')
-        try:
-            importlib.import_module('SPY_' + cImp)
-        except:
-            cprint('Module ' + cImp + ' Not Found.', 'red')
-    elif '@' in code:
-        modN = code.replace('@', '')
-        modFunct = input('What Function?  ')
-        modCall = getattr(modN, modFunct)
-        modOut = modCall()
-        return modOut
+    if '@' in code:
+        modN = ('SPY_' + code.replace('@', ''))
+        cImp = __import__(modN)
+        modin = input('What Function?  ')
+        func = getattr(cImp, 'init')
+        return func(modin)
 
 def inputHandler(code):
-    pH = printHandler(code)
-    if pH != None: return pH
+    if '@' in code:
+        modH = moduleHandler(code)
+        return modH
     else:
-        vH = varHandler(code)
-        if vH != None: return vH
+        pH = printHandler(code)
+        if pH != None: return pH
         else:
-            txtH = txtHandler(code)
-            if txtH != None: return txtH
+            vH = varHandler(code)
+            if vH != None: return vH
             else:
-                slashH = slashHandler(code)
-                if slashH != None: return slashH
-#                else:
-#                    modH = moduleHandler(code)
-#                    if modH != None: return modH
-                else: return ''
+                txtH = txtHandler(code)
+                if txtH != None: return txtH
+                else:
+                    slashH = slashHandler(code)
+                    if slashH != None: return slashH
+                    else: return ''
 
 def printHandler(code):
     # Print Functions  ### PUT BETA ON ECHO PRINT
