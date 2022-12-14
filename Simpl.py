@@ -9,7 +9,7 @@ try:
     from pathlib import Path
     import importlib
     import sys, time
-    from src.Handlers import printH, txtH, slashH, callH, varH
+    import src.Handlers
     version, updated = '0.8.0-beta', '12/14/2022'
     mods = []
     cBeta = 0
