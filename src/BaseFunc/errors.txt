@@ -26,3 +26,6 @@ ROOT ERROR    ROOT Error                    Variables or imports could not be lo
 {S-018x}      /get Error                    There was a problem using the /get command.
 {S-019x}      /Simpl-Py Error               There was a problem using the /Simpl-Py command.
 {S-020x}      Main Error                    There was a problem operating a main command.
+{S-021x}    Dot Operator Error              Used . (dot) operator illegally.
+{S-022x}    Underscore Operator Error       Used _ (underscore) operator illegally.
+{S-023x}    Slash Command Error             Invalid / (slash) command inserted.
