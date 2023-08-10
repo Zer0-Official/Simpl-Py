@@ -12,7 +12,7 @@ try:
 except:
     exit('ROOT ERROR: IMPORTS COULD NOT BE LOADED')
 
-version, updated = '0.8.1-beta', '3/24/2023'
+version, updated = '0.8.1-beta', '8/9/2023'
 var_name, var_val, var_type = [], [], []
 dev_mode, beta_mode, zer0_mode = 0, False, 0
 

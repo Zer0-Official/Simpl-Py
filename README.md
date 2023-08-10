@@ -8,7 +8,7 @@ Simpl-Py is an easy, fast, and simple recreational programming language that is 
 <img src="https://github.com/Zer0-Official/Simpl-Py/blob/main/src/media/Simpl-Py%20TN.png" align="middle" width="640" height="320"/>
 
 # News
-### 1. Simpl-Py's BIGGEST UPDATE EVER!?!?!?
+### Simpl-Py's BIGGEST UPDATE EVER!
 Simpl-Py 0.8.0-beta is definitely Simpl-Py's biggest update ever! Here are a few highlights:
 * Module System Working! (import custom modules and access functions)
 * New Website: switching from Google Sites to GitHub Pages
@@ -23,9 +23,6 @@ Simpl-Py 0.8.0-beta is definitely Simpl-Py's biggest update ever! Here are a few
     * More than 25 new error codes with optional detailed information
 * MORE!!!
   * Read the version release for all changes
-
-### 2. Top Season Features for 2022 (click the video thumbnail to watch)
-[![Simpl-Py 2022 Season Goals Video](https://img.youtube.com/vi/8-Fpl5dcBH4/0.jpg)](https://www.youtube.com/watch?v=8-Fpl5dcBH4)
 
 
 # Code
@@ -122,4 +119,4 @@ Goals Accomplished:
 To contribute, solve an issue, send a PR, report a bug, etc. Contributors are found in `src/BaseFunc/credits.txt`.
 
 #### Creator
-Simpl-Py by Zer0 2022
+Simpl-Py by Zer0 2023
